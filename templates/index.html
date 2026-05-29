@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade Nova Aurora - Home</title>
+    <!-- Importando o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-[Arial] m-0 p-0 max-w-full bg-gray-50 flex flex-col min-h-screen text-gray-800">
+    
+
+<!-- Header Modernizado com Home, Sobre Nós, Contato e Inscrição -->
+<header class="flex justify-between items-center bg-[#003366]/90 backdrop-blur-md text-white px-[5%] h-20 shadow-lg sticky top-0 z-50 transition-all">  
+    
+    <!-- Logo com link para a Home -->
+    <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
+        <img class="w-[60px] h-[60px] object-contain" src="/static/Academic_Crest_with_Digital_Pixel_Book-removebg-preview.png" alt="Logo Corporação">
+        <span class="font-serif font-bold text-lg tracking-wider hidden sm:block text-slate-100">NOVA AURORA</span>
+    </a>
+       
+    <!-- Menu de Navegação -->
+    <nav class="flex items-center gap-1 sm:gap-4">
+        <!-- Link Home -->
+        <a href="/" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
+            Home
+            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+        </a>
+
+        <!-- Link Sobre Nós -->
+        <a href="/sobre" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
+            Sobre nós
+            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+        </a>
+
+        <!-- Botão Contato (Estilo Vazado) -->
+        <a href="/contato" target="_parent" class="py-2 px-3 sm:px-4 text-xs sm:text-sm font-bold tracking-wide uppercase border border-white/20 hover:bg-white/10 text-white rounded-full transition-all duration-300 active:scale-95 text-center">
+            Contato
+        </a>        
+
+        <!-- Botão Inscrição Destacado (Dourado) -->
+        <a href="/inscricao" target="_parent" class="py-2 px-3 sm:px-5 text-xs sm:text-sm font-bold tracking-wide uppercase bg-[goldenrod] text-white rounded-full transition-all duration-300 hover:bg-yellow-600 hover:shadow-md active:scale-95 text-center shadow-sm">
+            Inscrição
+        </a>        
+    </nav>
+    
+</header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <hr class="border-gray-300">
+
+        <!-- Banner Principal / Fachada -->
+        <div class="relative overflow-hidden">
+            <img class="block w-[80vw] h-[40vw] mx-auto mt-7 rounded-xl shadow-lg object-cover" src="/static/homepng.png" alt="imagem da fachada">
+        </div>
+
+        <!-- Seção Principal: Boas-vindas -->
+        <section class="max-w-[800px] mx-auto my-[60px] bg-white p-10 rounded-xl shadow-[0_8px_20px_rgba(0,0,0,0.08)]">
+            <h1 class="text-[#1e3a8a] text-3xl font-bold mb-5 border-b pb-3 border-gray-100">
+                Universidade Nova Aurora
+            </h1>
+            <div class="text-[#444] text-lg leading-[1.7] space-y-[15px]">
+                <p>
+                    Bem-vindo à nossa universidade, um espaço dedicado ao conhecimento, à inovação e ao desenvolvimento de pessoas. 
+                    Aqui acreditamos que a educação é a base para transformar vidas e construir um futuro melhor.
+                </p>
+                <p>
+                    Nossa instituição oferece um ambiente acadêmico moderno, com professores qualificados, infraestrutura de qualidade 
+                    e diversas oportunidades para que os estudantes desenvolvam suas habilidades, ampliem seus conhecimentos e se preparem 
+                    para os desafios do mercado de trabalho.
+                </p>
+                <p>
+                    Mais do que formar profissionais, nosso compromisso é formar cidadãos críticos, criativos e preparados para contribuir 
+                    com a sociedade.
+                </p>
+            </div>
+        </section>
+
+        <!-- Seção de Indicadores/Números -->
+        <section class="max-w-[1000px] mx-auto mb-[60px] px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-[goldenrod]">
+                    <div class="text-3xl font-bold text-[#1e3a8a] mb-1">+45</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Cursos Graduação</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-[#003366]">
+                    <div class="text-3xl font-bold text-[#1e3a8a] mb-1">+15k</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Alunos Ativos</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-[goldenrod]">
+                    <div class="text-3xl font-bold text-[#1e3a8a] mb-1">Nota 5</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Avaliação MEC</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-[#003366]">
+                    <div class="text-3xl font-bold text-[#1e3a8a] mb-1">94%</div>
+                    <div class="text-sm text-gray-500 uppercase tracking-wider font-semibold">Empregabilidade</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Diferenciais -->
+        <section class="bg-gray-100 py-12 mb-[60px]">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <h2 class="text-center text-2xl font-bold text-[#003366] mb-8">Por que escolher a Nova Aurora?</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-[#003366] font-bold text-xl">🔬</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Infraestrutura</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Laboratórios de última geração, bibliotecas completas e salas de aula tecnológicas preparadas para o futuro do aprendizado.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4 text-[goldenrod] font-bold text-xl">👨‍🏫</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Corpo Docente</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Professores mestres e doutores atuantes no mercado, prontos para guiar sua carreira acadêmica e profissional com excelência.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-[#003366] font-bold text-xl">🌍</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Conexão Global</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Programas de intercâmbio com renomadas instituições internacionais e parcerias com grandes empresas do mercado.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Últimas Notícias -->
+        <section class="max-w-[1000px] mx-auto mb-[60px] px-4">
+            <h2 class="text-2xl font-bold text-[#003366] mb-6 border-l-4 border-[goldenrod] pl-3">Últimas Notícias</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Notícia 1 -->
+                <div class="flex flex-col sm:flex-row bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:border-gray-300 transition-colors">
+                    <div class="bg-gray-300 w-full sm:w-40 h-32 flex items-center justify-center text-gray-500 font-bold overflow-hidden rounded-l-xl sm:rounded-r-none rounded-t-xl sm:rounded-t-l">
+                        <img class="w-full h-full object-cover" src="/static/evento.jfif" alt="evento Hackathon">
+                    </div>
+                    <div class="p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-[goldenrod] uppercase">Inovação</span>
+                            <h4 class="font-bold text-base text-gray-800 mt-1 mb-2 hover:text-[#003366] cursor-pointer">Inscrições abertas para o Hackathon Acadêmico 2026</h4>
+                        </div>
+                        <span class="text-xs text-gray-400">29 de Maio, 2026</span>
+                    </div>
+                </div>
+                <!-- Notícia 2 -->
+                <div class="flex flex-col sm:flex-row bg-white rounded-xl overflow-hidden shadow-sm border border-gray-100 hover:border-gray-300 transition-colors">
+                    <div class="bg-gray-300 w-full sm:w-40 h-32 flex items-center justify-center text-gray-500 font-bold overflow-hidden rounded-l-xl sm:rounded-r-none rounded-t-xl sm:rounded-t-l">
+                        <img class="w-full h-full object-cover" src="/static/campu.png" alt="evento Hackathon">
+                    </div>
+                    <div class="p-4 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-blue-600 uppercase">Comunidade</span>
+                            <h4 class="font-bold text-base text-gray-800 mt-1 mb-2 hover:text-[#003366] cursor-pointer">Universidade Nova Aurora expande programas de bolsas sociais</h4>
+                        </div>
+                        <span class="text-xs text-gray-400">15 de Maio, 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner Call-to-Action (CTA) Final -->
+        <section class="max-w-[1000px] mx-auto mb-[60px] px-4">
+            <div class="bg-gradient-to-r from-[#003366] to-[#1e3a8a] rounded-2xl p-8 text-center text-white shadow-lg">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Pronto para começar sua jornada?</h2>
+                <p class="text-blue-100 mb-6 max-w-xl mx-auto text-sm md:text-base">As inscrições para o processo seletivo do segundo semestre estão abertas. Venha construir seu futuro conosco.</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="/inscricao" class="px-6 py-2.5 bg-[goldenrod] hover:bg-yellow-600 font-bold rounded-lg transition-colors shadow-md block text-center">Inscreva-se Já</a>
+                    <a href="/contato" class="px-6 py-2.5 border border-white/40 hover:bg-white/10 font-bold rounded-lg transition-colors block">Fale Conosco</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="block text-center bg-[#003366] text-white p-5 space-y-2 mt-auto">
+        <p>© 2026 Universidade Nova Aurora. Todos os direitos reservados.</p>
+        <p class="text-sm opacity-90">Promovendo conhecimento, inovação e excelência acadêmica para transformar o futuro.</p>
+    </footer>
+
+</body>
+</html>

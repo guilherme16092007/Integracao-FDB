@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade Nova Aurora - Sobre Nós</title>
+    <!-- Importando o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- Estrutura Flexbox para manter o footer sempre na base -->
+<body class="font-[Arial] m-0 p-0 max-w-full bg-gray-50 flex flex-col min-h-screen text-gray-800">
+    
+<!-- Header Modernizado com Home, Sobre Nós, Contato e Inscrição -->
+<header class="flex justify-between items-center bg-[#003366]/90 backdrop-blur-md text-white px-[5%] h-20 shadow-lg sticky top-0 z-50 transition-all">  
+    
+    <!-- Logo com link para a Home -->
+    <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
+        <img class="w-[60px] h-[60px] object-contain" src="/static/Academic_Crest_with_Digital_Pixel_Book-removebg-preview.png" alt="Logo Corporação">
+        <span class="font-serif font-bold text-lg tracking-wider hidden sm:block text-slate-100">NOVA AURORA</span>
+    </a>
+       
+    <!-- Menu de Navegação -->
+    <nav class="flex items-center gap-1 sm:gap-4">
+        <!-- Link Home -->
+        <a href="/" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
+            Home
+            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+        </a>
+
+        <!-- Link Sobre Nós -->
+        <a href="/sobre" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
+            Sobre nós
+            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+        </a>
+
+        <!-- Botão Contato (Estilo Vazado) -->
+        <a href="/contato" target="_parent" class="py-2 px-3 sm:px-4 text-xs sm:text-sm font-bold tracking-wide uppercase border border-white/20 hover:bg-white/10 text-white rounded-full transition-all duration-300 active:scale-95 text-center">
+            Contato
+        </a>        
+
+        <!-- Botão Inscrição Destacado (Dourado) -->
+        <a href="/inscricao" target="_parent" class="py-2 px-3 sm:px-5 text-xs sm:text-sm font-bold tracking-wide uppercase bg-[goldenrod] text-white rounded-full transition-all duration-300 hover:bg-yellow-600 hover:shadow-md active:scale-95 text-center shadow-sm">
+            Inscrição
+        </a>        
+    </nav>
+    
+</header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        
+        <!-- Banner de Entrada (Hero Section) -->
+        <div class="relative h-[40vh] md:h-[50vh] w-full overflow-hidden bg-black">
+            <img class="w-full h-full object-cover opacity-60" src="/static/ChatGPT Image 16 de mar. de 2026, 08_03_47.png" alt="Campus Universidade Nova Aurora">
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-4 text-center">
+                <span class="text-[goldenrod] uppercase tracking-widest font-bold text-xs md:text-sm mb-2">Conheça nossa história</span>
+                <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight drop-shadow-md">Sobre a Instituição</h1>
+            </div>
+        </div>
+
+        <!-- Seção: Quem Somos (Layout Adaptativo) -->
+        <section class="max-w-[1000px] mx-auto my-16 px-4">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Texto Institucional -->
+                <div class="md:col-span-7 space-y-6 text-lg leading-relaxed text-gray-600">
+                    <h2 class="text-3xl font-bold text-[#003366] border-l-4 border-[goldenrod] pl-3">Nossa Trajetória</h2>
+                    <p>
+                        A Universidade Nova Aurora é uma instituição dedicada à formação acadêmica de qualidade, à inovação e ao desenvolvimento do conhecimento. Criada com o objetivo de inspirar novas ideias e preparar estudantes para os desafios do futuro, a universidade oferece um ambiente moderno, colaborativo e voltado para a aprendizagem.
+                    </p
+                    <p>
+                        Nossa proposta educacional combina teoria e prática, incentivando a pesquisa, a criatividade e o pensamento crítico. A Universidade Nova Aurora busca formar profissionais qualificados, preparados para actar em diversas áreas do mercado e contribuir de forma positiva para a sociedade.
+                    </p>
+                </div>
+
+                <!-- Box de Destaque Visual Lateral -->
+                <div class="md:col-span-5 bg-gradient-to-br from-[#003366] to-[#1e3a8a] text-white p-8 rounded-2xl shadow-xl space-y-4">
+                    <h3 class="text-xl font-bold text-[goldenrod]">Compromisso Acadêmico</h3>
+                    <p class="text-sm opacity-90 leading-relaxed">
+                        Além do ensino, a universidade valoriza a diversidade, a inclusão e o desenvolvimento pessoal de cada estudante. Com uma comunidade acadêmica ativa e comprometida, promovemos projetos, eventos e atividades que estimulam a troca de conhecimento e a construção de novas oportunidades.
+                    </p>
+                    <div class="pt-2 border-t border-white/20 text-sm text-blue-200 italic">
+                        "Na Universidade Nova Aurora, acreditamos que a educação é a base para transformar o presente e construir um futuro melhor."
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção: Missão, Visão e Valores (Cards) -->
+        <section class="bg-gray-100 py-16">
+            <div class="max-w-[1000px] mx-auto px-4">
+                <h2 class="text-center text-2xl font-bold text-[#003366] mb-12">Nossos Pilares Fundamentais</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Missão -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-[goldenrod] text-center">
+                        <div class="text-3xl mb-3">🎯</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Missão</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Promover uma educação inovadora e prática, desenvolvendo pensadores críticos e prontos para liderar transformações positivas na sociedade.</p>
+                    </div>
+                    <!-- Visão -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-[#003366] text-center">
+                        <div class="text-3xl mb-3">👁️</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Visão</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Ser reconhecida globalmente como um ecossistema de excelência acadêmica, tecnologia integrada e forte impacto no mercado de trabalho.</p>
+                    </div>
+                    <!-- Valores -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-[goldenrod] text-center">
+                        <div class="text-3xl mb-3">🤝</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Valores</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Ética inabalável, respeito à diversidade, fomento constante à inovação científica e compromisso com o desenvolvimento humano sustentável.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Igual ao da Home) -->
+    <footer class="block text-center bg-[#003366] text-white p-5 space-y-2 mt-auto">
+        <p>© 2026 Universidade Nova Aurora. Todos os direitos reservados.</p>
+        <p class="text-sm opacity-90">Promovendo conhecimento, inovação e excelência acadêmica para transformar o futuro.</p>
+    </footer>
+
+</body>
+</html>

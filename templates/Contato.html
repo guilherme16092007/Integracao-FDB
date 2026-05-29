@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade Nova Aurora - Contato</title>
+    <!-- Importando o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<!-- Estrutura Flexbox para manter o footer sempre na base -->
+<body class="font-[Arial] m-0 p-0 max-w-full bg-gray-50 flex flex-col min-h-screen text-gray-800">
+    
+<!-- Header Modernizado com Home, Sobre Nós, Contato e Inscrição -->
+<header class="flex justify-between items-center bg-[#003366]/90 backdrop-blur-md text-white px-[5%] h-20 shadow-lg sticky top-0 z-50 transition-all">  
+    
+    <!-- Logo com link para a Home -->
+    <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
+        <img class="w-[60px] h-[60px] object-contain" src="/static/Academic_Crest_with_Digital_Pixel_Book-removebg-preview.png" alt="Logo Corporação">
+        <span class="font-serif font-bold text-lg tracking-wider hidden sm:block text-slate-100">NOVA AURORA</span>
+    </a>
+       
+    <!-- Menu de Navegação -->
+    <nav class="flex items-center gap-1 sm:gap-4">
+        <!-- Link Home -->
+        <a href="/" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
+            Home
+            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+        </a>
+
+        <!-- Link Sobre Nós -->
+        <a href="/sobre" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
+            Sobre nós
+            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+        </a>
+
+        <!-- Botão Contato (Estilo Vazado) -->
+        <a href="/contato" target="_parent" class="py-2 px-3 sm:px-4 text-xs sm:text-sm font-bold tracking-wide uppercase border border-white/20 hover:bg-white/10 text-white rounded-full transition-all duration-300 active:scale-95 text-center">
+            Contato
+        </a>        
+
+        <!-- Botão Inscrição Destacado (Dourado) -->
+        <a href="/inscricao" target="_parent" class="py-2 px-3 sm:px-5 text-xs sm:text-sm font-bold tracking-wide uppercase bg-[goldenrod] text-white rounded-full transition-all duration-300 hover:bg-yellow-600 hover:shadow-md active:scale-95 text-center shadow-sm">
+            Inscrição
+        </a>        
+    </nav>
+    
+</header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-[1000px] mx-auto w-full my-12 px-4">
+        <hr class="border-gray-200 mb-8">
+        
+        <div class="text-center mb-12">
+            <h1 class="text-3xl md:text-4xl font-extrabold text-[#003366] tracking-tight mb-2">Fale Conosco</h1>
+            <p class="text-gray-500 max-w-md mx-auto">Tem alguma dúvida, sugestão ou quer conhecer o campus? Envie uma mensagem para nossa equipe acadêmica.</p>
+        </div>
+
+        <!-- Container em Duas Colunas: Info e Formulário -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 bg-white rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] overflow-hidden">
+            
+            <!-- Coluna Esquerda: Informações da Universidade -->
+            <div class="md:col-span-5 bg-gradient-to-br from-[#003366] to-[#1e3a8a] text-white p-8 md:p-10 flex flex-col justify-between space-y-8">
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-[goldenrod] border-b border-white/10 pb-3">Canais de Atendimento</h3>
+                    
+                    <!-- Endereço -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-xl">📍</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-blue-200">Nosso Campus</h4>
+                            <p class="text-sm opacity-90 mt-0.5">Av. Nova Aurora, 1500 - Centro Acadêmico</p>
+                        </div>
+                    </div>
+
+                    <!-- Telefone -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-xl">📞</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-blue-200">Central de Atendimento</h4>
+                            <p class="text-sm opacity-90 mt-0.5">(12) 3456-7890</p>
+                        </div>
+                    </div>
+
+                    <!-- Horário -->
+                    <div class="flex items-start gap-3">
+                        <span class="text-xl">🕒</span>
+                        <div>
+                            <h4 class="font-bold text-sm text-blue-200">Horário de Funcionamento</h4>
+                            <p class="text-sm opacity-90 mt-0.5">Segunda a Sexta: 08h às 22h<br>Sábado: 08h às 12h</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer interno da coluna esquerda -->
+                <div class="pt-6 border-t border-white/10">
+                    <span class="text-xs text-blue-200 block mb-2 uppercase tracking-widest font-semibold">Siga-nos</span>
+                    <div class="flex gap-3 text-xs opacity-80">
+                        <span class="cursor-pointer hover:text-[goldenrod] transition-colors">Instagram</span> • 
+                        <span class="cursor-pointer hover:text-[goldenrod] transition-colors">LinkedIn</span> • 
+                        <span class="cursor-pointer hover:text-[goldenrod] transition-colors">YouTube</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coluna Direita: Formulário de Contato -->
+            <form class="md:col-span-7 p-8 md:p-10 flex flex-col justify-center text-gray-700 font-medium space-y-4">
+                
+                <div>
+                    <label class="block text-sm font-bold text-gray-600 mb-1">Nome Completo</label>
+                    <input type="text" placeholder="Digite seu nome" class="w-full p-3 rounded-xl border border-gray-300 outline-none focus:border-[#003366] focus:ring-2 focus:ring-[#003366]/20 transition-all px-4 font-normal text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-600 mb-1">E-mail Institucional ou Pessoal</label>
+                    <input type="email" placeholder="Digite seu e-mail" class="w-full p-3 rounded-xl border border-gray-300 outline-none focus:border-[#003366] focus:ring-2 focus:ring-[#003366]/20 transition-all px-4 font-normal text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-600 mb-1">Assunto</label>
+                    <input type="text" placeholder="Qual o motivo do contato?" class="w-full p-3 rounded-xl border border-gray-300 outline-none focus:border-[#003366] focus:ring-2 focus:ring-[#003366]/20 transition-all px-4 font-normal text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-600 mb-1">Mensagem</label>
+                    <textarea placeholder="Escreva detalhadamente sua mensagem..." class="w-full p-3 rounded-xl border border-gray-300 outline-none focus:border-[#003366] focus:ring-2 focus:ring-[#003366]/20 transition-all h-32 px-4 font-normal text-sm resize-none"></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full p-3.5 bg-[goldenrod] border-none rounded-xl text-white font-bold cursor-pointer hover:bg-yellow-600 hover:shadow-lg transition-all active:scale-[0.99] text-center uppercase tracking-wide text-sm">
+                        Enviar Mensagem
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer (Igual ao da Home e Sobre) -->
+    <footer class="block text-center bg-[#003366] text-white p-5 space-y-2 mt-auto">
+        <p>© 2026 Universidade Nova Aurora. Todos os direitos reservados.</p>
+        <p class="text-sm opacity-90">Promovendo conhecimento, inovação e excellence acadêmica para transformar o futuro.</p>
+    </footer>
+
+</body>
+</html>

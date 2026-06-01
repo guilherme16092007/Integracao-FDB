@@ -4,44 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universidade Nova Aurora - Inscrição</title>
-    <!-- Importando o Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="font-[Arial] m-0 p-0 max-w-full bg-gray-50 flex flex-col min-h-screen text-gray-800">
     
-<!-- Header Modernizado com Home, Sobre Nós, Contato e Inscrição -->
+<!-- Header  -->
 <header class="flex justify-between items-center bg-[#003366]/90 backdrop-blur-md text-white px-[5%] h-20 shadow-lg sticky top-0 z-50 transition-all">  
     
-    <!-- Logo com link para a Home -->
+    <!-- Logo  -->
     <a href="/" class="flex items-center gap-2 hover:opacity-90 transition-opacity">
         <img class="w-[60px] h-[60px] object-contain" src="/static/Academic_Crest_with_Digital_Pixel_Book-removebg-preview.png" alt="Logo Corporação">
         <span class="font-serif font-bold text-lg tracking-wider hidden sm:block text-slate-100">NOVA AURORA</span>
     </a>
        
-    <!-- Menu de Navegação -->
-    <nav class="flex items-center gap-1 sm:gap-4">
-        <!-- Link Home -->
-        <a href="/" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
-            Home
-            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
+    <!-- Navbar -->
+    <nav class="flex items-center gap-2 sm:gap-4">
+    <a href="/" class="py-2 px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10">Home</a>
+
+    <a href="/sobre" class="py-2 px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10">Sobre nós</a>
+
+    <a href="/contato" class="py-2 px-3 sm:px-4 text-xs sm:text-sm font-bold tracking-wide uppercase border border-white/20 hover:bg-white/10 text-white rounded-full transition-all duration-300 text-center">Contato</a>   
+
+    <a href="/inscricao" class="py-2 px-3 sm:px-5 text-xs sm:text-sm font-bold tracking-wide uppercase bg-[goldenrod] text-white rounded-full transition-all duration-300 hover:bg-yellow-600 text-center shadow-sm">Inscrição</a> 
+    
+    {% if session.get('usuario_id') %}
+        <div class="flex items-center gap-2 bg-white/10 py-1.5 px-3 rounded-full border border-white/10">
+            <span class="text-xl">👤</span>
+            <span class="text-[goldenrod] text-xs font-bold hidden md:inline">Olá, {{ session['usuario_nome'].split()[0] }}</span>
+        </div>
+        <a href="/logout" class="py-1.5 px-3 text-xs font-bold tracking-wide uppercase border border-red-400 text-red-400 hover:bg-red-500 hover:text-white rounded-full transition-all duration-300">Sair</a>
+    {% else %}
+        <a href="/login" class="flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all border border-white/20" title="Área do Candidato">
+            <span class="text-lg">👤</span>
         </a>
-
-        <!-- Link Sobre Nós -->
-        <a href="/sobre" target="_parent" class="relative py-2 px-2 sm:px-3 text-xs sm:text-sm font-bold tracking-wide uppercase transition-all duration-300 rounded-lg hover:bg-white/10 hover:text-white group">
-            Sobre nós
-            <span class="absolute bottom-0 left-1/2 w-0 h-[2px] bg-[goldenrod] transition-all duration-300 group-hover:w-3/4 group-hover:left-[12.5%]"></span>
-        </a>
-
-        <!-- Botão Contato (Estilo Vazado) -->
-        <a href="/contato" target="_parent" class="py-2 px-3 sm:px-4 text-xs sm:text-sm font-bold tracking-wide uppercase border border-white/20 hover:bg-white/10 text-white rounded-full transition-all duration-300 active:scale-95 text-center">
-            Contato
-        </a>        
-
-        <!-- Botão Inscrição Destacado (Dourado) -->
-        <a href="/inscricao" target="_parent" class="py-2 px-3 sm:px-5 text-xs sm:text-sm font-bold tracking-wide uppercase bg-[goldenrod] text-white rounded-full transition-all duration-300 hover:bg-yellow-600 hover:shadow-md active:scale-95 text-center shadow-sm">
-            Inscrição
-        </a>        
-    </nav>
+               
+    {% endif %}
+</nav>
     
 </header>
 

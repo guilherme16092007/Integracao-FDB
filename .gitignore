@@ -1,1 +1,6 @@
-
+db_config = {
+    'host': 'localhost',
+    'user': 'root',       
+    'password': 'guilherme',  
+    'database': 'nova_aurora_db'
+}

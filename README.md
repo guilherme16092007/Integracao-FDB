@@ -30,8 +30,9 @@ Docker e Docker Compose instalados.
 
 Git instalado.
 
-Passo a passo
-Clone o repositório:
+## ✅Passo a passo
+
+#Clone o repositório:
 
 Bash
    git clone https://github.com/guilherme16092007/Integracao-FDB.git
@@ -41,7 +42,8 @@ Configure as variáveis de ambiente:
 Bash
    cp .env.example .env
     Edite o arquivo .env com suas configurações de banco de dados
-Suba o sistema:
+    
+#Suba o sistema:
 
 Bash
    docker compose up -d --build

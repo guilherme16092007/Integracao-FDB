@@ -32,7 +32,7 @@ Git instalado.
 
 ## ✅Passo a passo
 
-#Clone o repositório:
+# Clone o repositório:
 
 Bash
    git clone https://github.com/guilherme16092007/Integracao-FDB.git
@@ -43,7 +43,7 @@ Bash
    cp .env.example .env
     Edite o arquivo .env com suas configurações de banco de dados
     
-#Suba o sistema:
+# Suba o sistema:
 
 Bash
    docker compose up -d --build

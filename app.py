@@ -37,6 +37,49 @@ def salvar_no_banco(tabela, nome, cpf, telefone, email):
         print(f"Erro no banco de dados: {err}")
         return False
 
+def inicializar_banco():
+    try:
+        conexao = mysql.connector.connect(**db_config)
+        cursor = conexao.cursor()
+        
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS inscritos_engenharia (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nome_completo VARCHAR(150) NOT NULL,
+            cpf VARCHAR(14) NOT NULL UNIQUE,
+            telefone VARCHAR(20) NOT NULL,
+            email VARCHAR(100) NOT NULL,
+            data_inscricao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE TABLE IF NOT EXISTS inscritos_administracao (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nome_completo VARCHAR(150) NOT NULL,
+            cpf VARCHAR(14) NOT NULL UNIQUE,
+            telefone VARCHAR(20) NOT NULL,
+            email VARCHAR(100) NOT NULL,
+            data_inscricao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+
+        CREATE TABLE IF NOT EXISTS inscritos_marketing (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            nome_completo VARCHAR(150) NOT NULL,
+            cpf VARCHAR(14) NOT NULL UNIQUE,
+            telefone VARCHAR(20) NOT NULL,
+            email VARCHAR(100) NOT NULL,
+            data_inscricao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        );
+        """)
+        
+        conexao.commit()
+        cursor.close()
+        conexao.close()
+        print("Banco de dados inicializado com o script próprio!")
+    except Exception as e:
+        print(f"Erro ao inicializar o banco: {e}")
+
+inicializar_banco()
+
 @app.route('/')
 def home():
     return render_template('index.html')
@@ -84,7 +127,7 @@ def login():
         email = request.form.get('email')
         cpf = request.form.get('cpf')
 
-        tabelas = ['inscritos_ads', 'inscritos_engenharia', 'inscritos_administracao', 'inscritos_marketing']
+        tabelas = ['inscritos_engenharia', 'inscritos_administracao', 'inscritos_marketing']
         usuario_encontrado = None
 
         try:
@@ -109,10 +152,10 @@ def login():
                 session['usuario_nome'] = usuario_encontrado['nome_completo']
                 return redirect('/')
             else:
-                return render_template('login.html', erro="Candidato não encontrado. Verifique o E-mail e o CPF.")
+                return render_template('login.html', erro="Candidato não encontrado.")
 
         except mysql.connector.Error as err:
-            return render_template('login.html', erro="Erro de conexão com o banco de dados.")
+            return render_template('login.html', erro="Erro de conexão com o banco.")
 
     return render_template('login.html')
 

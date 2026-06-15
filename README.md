@@ -54,19 +54,19 @@ Local: http://localhost:5000
 AWS EC2: http://http://100.56.75.22:5000
 
 
-## 📸 Evidências da Atividade
+# 📸 Evidências da Atividade
 
 Prints:
 
-# Aplicação rodando na AWS EC2
+## Aplicação rodando na AWS EC2
 <img width="1874" height="976" alt="image" src="https://github.com/user-attachments/assets/9c210915-8063-4b03-b07d-cfc8d94ff710" />
 
 
-# Containers rodando
+## Containers rodando
 <img width="977" height="506" alt="image" src="https://github.com/user-attachments/assets/46fd002f-3678-445d-b75e-0701f83314f6" />
 
 
-# Print do site no ar
+## Print do site no ar
 <img width="1861" height="990" alt="image" src="https://github.com/user-attachments/assets/c110eab2-e915-432a-862e-b893b597263c" />
 
 

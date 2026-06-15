@@ -53,7 +53,6 @@ AWS EC2: http://http://100.56.75.22:5000
 
 
 📸 Evidências da Atividade
-Imagem no Docker Hub: [Link para sua imagem aqui][cite: 1]
 
 Prints:
 

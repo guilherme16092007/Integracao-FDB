@@ -40,7 +40,7 @@ Configure as variáveis de ambiente:
 
 Bash
    cp .env.example .env
-   # Edite o arquivo .env com suas configurações de banco de dados
+    Edite o arquivo .env com suas configurações de banco de dados
 Suba o sistema:
 
 Bash

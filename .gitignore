@@ -1,6 +1,16 @@
-db_config = {
-    'host': 'localhost',
-    'user': 'root',       
-    'password': 'guilherme',  
-    'database': 'nova_aurora_db'
-}
+# Arquivos de ambiente local (Contém senhas e chaves reais - NUNCA SUBIR)
+.env
+
+# Ambiente Virtual do Python
+venv/
+.venv/
+env/
+
+# Arquivos temporários do Python (Compilados)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos do VS Code (Configurações locais de workspace)
+.vscode/

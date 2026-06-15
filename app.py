@@ -1,15 +1,22 @@
 from flask import Flask, render_template, request, redirect, session
 import mysql.connector
+import os
 
 app = Flask(__name__)
 app.secret_key = 'chave_secreta_para_alertas'
 
-# Configurações de conexão com o seu MySQL local
+app.secret_key = os.environ.get('SECRET_KEY', 'chave_secreta_para_alertas')
+
+DB_HOST = os.environ.get('DB_HOST', 'localhost')
+DB_USER = os.environ.get('DB_USER', 'root')
+DB_PASSWORD = os.environ.get('DB_PASSWORD', '')
+DB_NAME = os.environ.get('DB_NAME', 'nova_aurora_db')
+
 db_config = {
-    'host': 'localhost',
-    'user': 'root',       
-    'password': 'fatec',  
-    'database': 'nova_aurora_db'
+    'host': DB_HOST,
+    'user': DB_USER,   
+    'password': DB_PASSWORD,  
+    'database': DB_NAME
 }
 
 def salvar_no_banco(tabela, nome, cpf, telefone, email):
@@ -82,12 +89,7 @@ def login():
 
         try:
 
-            conexao = mysql.connector.connect(
-                host="localhost",
-                user="root",
-                password="fatec",
-                database="nova_aurora_db"
-            )
+            conexao = mysql.connector.connect(**db_config)
             cursor = conexao.cursor(dictionary=True)
 
             for tabela in tabelas:
@@ -120,4 +122,4 @@ def logout():
     return redirect('/')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

@@ -66,7 +66,7 @@ Prints:
 <img width="977" height="506" alt="image" src="https://github.com/user-attachments/assets/46fd002f-3678-445d-b75e-0701f83314f6" />
 
 
-## Print do site no ar
+## Site no ar
 <img width="1861" height="990" alt="image" src="https://github.com/user-attachments/assets/c110eab2-e915-432a-862e-b893b597263c" />
 
 

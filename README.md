@@ -56,12 +56,17 @@ AWS EC2: http://http://100.56.75.22:5000
 
 Prints:
 
-[Print da aplicação rodando na AWS EC2]
+# Aplicação rodando na AWS EC2
 <img width="1874" height="976" alt="image" src="https://github.com/user-attachments/assets/9c210915-8063-4b03-b07d-cfc8d94ff710" />
 
 
-[Print dos containers ativos - docker ps]
+# Containers rodando
 <img width="977" height="506" alt="image" src="https://github.com/user-attachments/assets/46fd002f-3678-445d-b75e-0701f83314f6" />
+
+
+# Print do site no ar
+<img width="1861" height="990" alt="image" src="https://github.com/user-attachments/assets/c110eab2-e915-432a-862e-b893b597263c" />
+
 
 
 Projeto desenvolvido para a Atividade 5 - Design Inovador.

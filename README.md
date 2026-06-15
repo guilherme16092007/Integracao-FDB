@@ -17,7 +17,7 @@ Este projeto consiste em um sistema web desenvolvido para o gerenciamento de ins
 * **Automação:** Inicialização automática do banco de dados e criação de tabelas na primeira execução.
 
 ## 📂 Estrutura de Pastas
-```text
+
 .
 ├── app.py              
 ├── Dockerfile          

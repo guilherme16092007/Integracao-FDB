@@ -37,7 +37,8 @@ Git instalado.
 Bash
    git clone https://github.com/guilherme16092007/Integracao-FDB.git
    cd Integracao-FDB
-Configure as variáveis de ambiente:
+   
+##Configure as variáveis de ambiente:
 
 Bash
    cp .env.example .env

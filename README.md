@@ -48,7 +48,7 @@ Bash
 Bash
    docker compose up -d --build
 🌐 Como Acessar
-Local: http://localhost:5000
+Local: http://seuip:5000
 
 
 AWS EC2: http://http://100.56.75.22:5000
